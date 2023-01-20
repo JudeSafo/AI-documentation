@@ -1,0 +1,75 @@
+/*CSS code for styling form elements*/
+.center {
+    text-align: center;
+}
+.title {
+    text-align: center;
+    margin-top: 20px;
+}
+.description {
+    text-align: center;
+    margin: 20px;
+}
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+p {
+    font-size: 24px;
+}
+#file, #submit {
+    margin-top: 20px;
+}
+.right-top {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 18px;
+    color: #333;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+}
+textarea {
+    font-size: 18px;
+    color: #333;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+    width: 50%;
+    margin: 20px;
+}
+input[type=file] {
+    font-size: 18px;
+    color: #333;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    margin-top: 20px;
+}
+input[type=submit] {
+    font-size: 18px;
+    color: #333;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    margin-top: 20px;
+}
+footer {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+    padding: 10px;
+}
+

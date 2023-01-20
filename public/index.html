@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Input</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="center title">
+        <h1>Chat-Doc</h1>
+    </div>
+    <div class="center description">
+        <p>Dynamic documentation that responds to specific prompts from your clients. Simply load the flat file of your documentation below.</p>
+    </div>
+    <div class="center">
+        <form>
+            <textarea id="input" placeholder="Enter your query here"></textarea>
+            <input type="file" id="file" class="center">
+            <input type="submit" id="submit" value="Submit" class="center">
+        </form>
+    </div>
+    <div class="center" id="response"></div>
+    <button id="join-waitlist" class="right-top">Join Waitlist</button>
+    <div id="join-waitlist-form" style="display:none">
+        <form>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="occupation">Occupation:</label>
+            <input type="text" id="occupation" name="occupation" required>
+            <label for="role">Role:</label>
+            <input type="text" id="role" name="role" required>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <footer>
+        <p>Copyright © 2023 Haiphen Incorporated. All Rights Reserved</p>
+        <p>Contact us | Privacy policy | Terms and conditions</p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
+
