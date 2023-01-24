@@ -1,11 +1,12 @@
 import os
-from flask import Flask, request, jsonify
+from fastapi import FastAPI, HTTPException
 import requests
+MAX_INPUT_LENGTH = 32
 
 app = Flask(__name__)
 
 # Set the API key
-api_key = os.environ['OPEN_AI'] #"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"
+api_key = os.environ['OPEN_AI'] 
 
 @app.route('/gpt', methods=['POST'])
 def generate_response():
@@ -33,6 +34,12 @@ def generate_response():
     # Return the response text as JSON
     return jsonify(response_text)
 
+def validate_input_length(prompt: str):
+    if len(prompt) >= MAX_INPUT_LENGTH:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Input length is too long. Must be under {MAX_INPUT_LENGTH} characters.",
+        )
 if __name__ == '__main__':
     app.run(debug=True)
 

@@ -2,6 +2,27 @@
     // Include the database connection file
     require_once '../db/connection.php';
 
+    // Retrieve the user input from the form
+    $userInput = $_POST['userInput'];
+    // Create a data array with the user input
+    $data = array('prompt' => $userInput);
+    // Endpoint URL
+    $url = 'http://localhost:5000/gpt';
+    // Use curl to make a POST request to the API endpoint with the data array
+    $options = array(
+        'http' => array(
+            'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+            'method'  => 'POST',
+            'content' => http_build_query($data)
+        )
+    );
+    $context  = stream_context_create($options);
+    $result = file_get_contents($url, false, $context);
+    // Parse the JSON response
+    $response = json_decode($result);
+    // Use the response data
+    echo $response->text;
+
     // check if the form has been submitted
     if(isset($_POST['input'])) {
         // Get the user input
